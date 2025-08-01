@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Lato-Light;
+    src: url(/fonts/Lato/Lato-Thin.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(/fonts/Lato/lato.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: LatoBold;
+    src: url(/fonts/Lato/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(/fonts/Inter/inter.woff2) format('woff2');
+    font-weight: 100 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Poppins-Light;
+    src: url(/fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(/fonts/Poppins/poppins.woff2) format('woff2');
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/fonts/Montserrat/montserrat.woff2) format('woff2');
+    font-weight: 100 700;
+    font-display: swap;
+}

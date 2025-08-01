@@ -1,0 +1,231 @@
+/* Media Queries */
+
+@media screen and (min-width: 800px)
+{
+    :root
+    {
+        --navDer: #f8f8f833;
+        --botones: #f5f5f536;
+        --tamNavRojo: 5.4rem;
+    }
+    .oculto { display:  flex !important;}
+    .header__openclose
+    {
+        display: none;
+    }
+    .header
+    {
+        width: 100%;
+        z-index: 15;
+        position: absolute;
+    }
+    .header-container
+    {
+        margin: auto;
+        max-width: 1150px;
+        display: flex;
+        flex-direction: row;
+        border-bottom-left-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+        padding: .5rem 0 .5rem 0;
+    }
+    .div__logo 
+    {
+        margin: auto auto auto 1rem;
+    }
+    .div__logo > .header__logo
+    {
+        margin: 0 1rem 0 auto;
+        max-height: 5rem;
+        min-width: 5rem;
+    }
+    .header__nav{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .header .div__button
+    {
+        margin: auto 0 auto auto;
+        max-width: 12rem;
+    }
+    .header__button-about
+    {
+        margin: auto 1rem auto auto;
+        text-wrap: nowrap;
+        transition: background .21s, box-shadow .8s;
+    }
+    .header__button-about:hover
+    {
+        background-color: var(--botones);
+        box-shadow: 0 0 15px 0 rgba(191, 152, 152, 0.667);
+    }
+
+    .nav__row1 .nav__item:last-child, .nav__row2 .nav__item:last-child
+    {
+        border: 1px solid var(--botones) !important;
+    }
+    .nav__row1 .nav__item:first-child, .nav__row2 .nav__item:last-child /* RELLENAR */
+    {
+        width: 90% !important;
+    }
+    .nav__row1 > a.nav__item, .nav__row2 > a.nav__item /* NAV ITEM */
+    {
+        width: max-content !important;
+        font-size: 1rem;
+        margin: 0 auto 0 auto !important;
+        text-wrap: nowrap;
+        background: none !important;
+        box-shadow: none !important;
+        color: var(--parrafo);
+        height: auto;
+        transition: color .076s, background .16s;
+    }
+    a.nav__item:hover
+    {
+        background-color: var(--descripcion) !important;
+        color: var(--secundario);
+    }
+    .sector_inicio
+    {
+        background-image: url(/img/ignacio-espalda2.webp);
+        display: flex;
+    }
+    .inicio-container
+    {
+        height: auto;
+        margin: auto;
+    }
+    h1.inicio__title
+    {
+        text-align: start;
+    }
+    .inicio__textdiv div
+    {
+        max-width: 600px;
+    }
+    .quiensoy-container
+    {
+        margin: auto;
+        max-width: 1150px;
+    }
+    .sector_clientes
+    {
+        display: grid;
+        grid-template-columns: minmax(50%,1fr) minmax(50%,1fr);
+        grid-template-rows: minmax(auto,1fr);
+    }
+    #s3__c1.cliente
+    {
+        grid-column: 1 / 1;
+    }
+    p.cliente__review
+    {
+        margin: auto;
+        max-width: 320px;
+    }
+    .sector_planes
+    {
+        flex-direction: row;
+    }
+    .cliente__title
+    {
+        margin: 1.43rem auto 1.43rem auto;
+        width: 65%;
+    }
+    .plan
+    {
+        transition: transform .35s;
+    }
+    .plan:hover
+    {
+        z-index: 10;
+        transform: scale(1.17);
+    }
+    .plan__buy:hover
+    {
+        color: #103d80;
+        background-color: #fff;
+        outline: 1px solid #103d80;
+        box-shadow: 0 0 10px 0 #103d80;
+    }
+    .contacto-container
+    {
+        padding: 2.3rem 0 2.3rem 0;
+        margin: auto;
+        max-width: 650px;
+    }
+    .contacto
+    {
+        margin: 2.1rem auto 2.1rem auto;
+        max-width: 88%;
+    }
+    .contacto__enviar:hover
+    {
+        cursor: pointer;
+        color: var(--principal);
+        background-color: var(--fondocontacto);
+        outline: 1px solid var(--principal);
+    }
+}
+@media screen and (min-width: 1050px) {
+    .header
+    {
+        position: fixed;
+    }
+    .header__nav
+    {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    .div__logo
+    {
+        margin-right: auto;
+    }
+    .header .div__button
+    {
+        margin: auto 0 auto auto;
+        width: 16rem;
+    }
+    .nav__row a.nav__item
+    {
+        margin: auto 0 auto 0 !important;
+        height: fit-content;
+    }
+    .quiensoy__textomodal:nth-of-type(1), .quiensoy__textomodal:nth-of-type(2)
+    {
+        padding: 1rem .8rem 1rem .8rem;
+    }
+    .cliente:first-child
+    {
+        padding: 3.1rem;
+    }
+    .cliente:last-child
+    {
+        padding-right: 3.1rem;
+    }
+    .cliente__wrapper-img
+    {
+        margin: auto;
+        width: 85%;
+    }
+    .cliente__img
+    {
+        margin: auto;
+        max-width: 18rem;
+        max-height: 25.867rem;
+        height: auto;
+    }
+}
+@media screen and (min-width: 1500px) {
+
+    .cliente__img
+    {
+        margin: auto;
+        max-width: 18rem;
+        max-height: 32.67rem;
+        height: auto;
+    }
+}
+

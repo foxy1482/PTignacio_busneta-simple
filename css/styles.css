@@ -1,0 +1,614 @@
+:root
+{
+    /* Colores */   
+    --principal: #9c9c9c;
+    --secundario: #ffffff;
+    --titulos: #ffffff;
+    --descripcion: #a1b9c1;
+    --parrafo: #4d4b4b;
+    --rojoOscuro: #444444;
+    --sombras: #d0d0d0;
+    --navDer: #f8f8f833;
+    --botones: #f5f5f536;
+    --planavanzado: #45466c;
+    --planatleta: #5e75b5;
+    --planinicial: #9dc7bf;
+    --fondocontacto: #323236;
+    --negroTr: #6666;
+    /* Tamaños */
+    --tamNavRojo: 6.4rem;
+    --tambotones: .49rem;
+    --tamplanes: 19rem;
+    --alturaformulario: 30dvh;
+    /* Radius */
+    --nav: 1.4rem;
+    --radiobotones: .46rem;
+}
+
+a
+{
+    font-family: Lato;
+    text-align: center;
+    text-decoration: none;
+    color: var(--titulos);
+}
+p.parrafo { color: var(--parrafo); font-family: Lato; font-size: 1.0456rem; }
+span.negrita { font-weight: 800; color: #888;}
+body
+{
+    overflow-x: hidden;
+}
+body, *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.header
+{
+    padding: 0;
+}
+.header-container
+{
+    background-color: var(--principal);
+    display: grid;
+    grid-template-columns: minmax(80px,.1fr) minmax(auto, 1fr);
+
+}
+.div__logo
+{
+    margin: auto;
+    grid-row: 0 / 0;
+    grid-column: 2 / 2;
+}
+.div__logo > .header__logo
+{
+    margin: auto;
+    max-width: 100%;
+    max-height: 6.75rem;
+    filter: saturate(20%) hue-rotate(200deg) brightness(500%);
+}
+.header__nav
+{
+    grid-column: span 2;
+    border-top: 1px dashed var(--negroTr);
+    border-bottom: 1px dashed var(--negroTr);
+    min-height: 3.3rem;
+    display: grid;
+    grid-template-rows: minmax(auto, 2fr) minmax(auto, 2fr);
+    margin: auto;
+    transition: display .35s;
+}
+
+/* Navbar section */
+.header__openclose
+{
+    display: flex;
+}
+.header__ocbutton
+{
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    color: var(--secundario);
+}
+.oculto
+{
+    display: none !important;
+}
+
+.nav__row
+{
+    display: grid;
+    grid-template-columns: minmax(20px, 1fr) minmax(20px, 1fr) minmax(20px, 1fr);
+    min-width: 18rem;
+    width: 22rem;
+    margin: .7rem auto .7rem auto;
+}
+
+.nav__item
+{
+    justify-items: center;
+    align-content: center;
+    text-transform: capitalize;
+    box-shadow: 0 0 14px -5px var(--sombras);
+    text-shadow: 0 0 4px var(--sombras);
+    letter-spacing: .045rem;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1.12rem;
+    margin: 0;
+    padding: var(--tambotones);
+    border: 1px solid var(--botones);
+    border-radius: var(--nav);
+    color: var(--rojoOscuro);
+}
+
+.nav__row1 .nav__item:nth-child(2)
+{
+    margin: 0;
+    margin-left: auto;
+}
+.nav__row1 .nav__item:nth-child(3)
+{
+    width: var(--tamNavRojo);
+    margin-left: auto;
+    border: none;
+    background-color: var(--navDer);
+}
+.nav__row2 .nav__item:nth-child(2)
+{
+    width: var(--tamNavRojo);
+    margin-left: auto;
+    border: none;
+    background-color: var(--navDer);
+}
+.nav__row2 .nav__item:nth-child(1)
+{
+    grid-column: span 2;
+}
+
+.div__button
+{
+    display: flex;
+    width: 100%;
+    margin: 1rem auto 1.5rem auto;
+    grid-column: span 2;
+}
+.header__button-about
+{
+    font-family: Poppins;
+    background-color: #222;
+    box-shadow: 0 0 10px 5px var(--negroTr);
+    font-size: 1.12rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px #fff;
+    font-weight: 500;
+    border-radius: var(--nav);
+    margin: .78rem auto 0 auto;
+    padding: .36rem;
+    width: 65%;
+    height: fit-content;
+}
+
+*::before, .quiensoy__bigtitle
+{
+    margin: auto;
+    padding: .44rem 0 .44rem 0;
+    display: flex;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--negroTr);
+    width: 100%;
+    justify-content: center;
+    grid-column: span 2;
+}
+
+/* Seccion 1 Inicio */
+.sector_inicio
+{
+    background-image: url(/img/ignacio-espalda.webp);
+    background-position: center;
+    background-size: cover;
+    height: 78dvh;
+}
+.inicio-container
+{
+    height: 100%;
+    backdrop-filter: blur(3px);
+}
+h1.inicio__title
+{
+    color: var(--titulos);
+    font-family: Quicksand;
+    padding: 4.23rem 0 1.23rem 0;
+    text-align: center;
+}
+.sector_inicio .inicio__textdiv
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.inicio__textdiv > div
+{
+    margin: auto;
+}
+.sector_inicio .inicio__text
+{
+    color: var(--descripcion);
+    font-family: Inter;
+    line-height: 1.3rem;
+    padding: .67rem;
+    background-color: var(--negroTr);
+    transition: filter .55s;
+}
+#p2
+{
+    margin: 0;
+}
+.blur
+{
+    filter: blur(4px);
+}
+
+/* Seccion 2 Quien Soy */
+
+.sector_quiensoy
+{
+    background-color: #111;
+}
+.quiensoy-container
+{
+    padding: 3.66rem 1.1rem 4rem 1.1rem;
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+    max-width: 1200px;
+    box-sizing: content-box;
+    box-shadow: none;
+    animation: iluminado 2.16s infinite;
+    background-color: #5552;
+}
+.quiensoy__bigtitle
+{
+    color: #dedede;
+    grid-row: 1;
+}
+.quiensoy__textomodal
+{
+    padding: 1rem 1.13rem 1rem 1.13rem;
+    border-radius: 1rem;
+    font-size: .968rem;
+    font-weight: 450;
+    font-family: Quicksand;
+    color: #fff;
+    margin: 1.1rem 0 1.1rem 0;
+    line-height: 1.87;
+    z-index: 10;
+}
+.quiensoy__textomodal:nth-of-type(1)
+{
+    padding: 1rem 2.13rem 1rem 2.13rem;
+    grid-column: span 2;
+}
+.quiensoy__textomodal:nth-of-type(2)
+{
+    padding: 1rem 2.13rem 1rem 2.13rem;
+    grid-column: span 2;
+}
+.quiensoy__img
+{
+    margin: auto;
+    grid-column: span 2;
+    grid-row: 2 / 2;
+    max-width: 80%;
+    border: 1px solid #fff3;
+    border-radius: .8rem;
+    box-shadow: 0 0 5px 5px #0002;
+    opacity: 0.4;
+}
+.quiensoy__img:last-of-type
+{
+    object-fit: cover;
+    height: 18rem;
+    max-width: 95%;
+    grid-column: 1 / 2;
+    grid-row: 5 / 5;
+}
+
+/* Sección 3 Clientes */
+
+.sector_clientes
+{
+    background-image: url(/img/equipamiento.webp);
+    background-size: cover;
+    background-position: center;
+}
+.sector_clientes::before
+{
+    content: 'MIS CLIENTES';
+    color: #000;
+    backdrop-filter: saturate(10%);
+}
+.cliente
+{
+    backdrop-filter: saturate(10%);
+    display: flex;
+    flex-direction: column;
+    padding: 2.23rem 0 2.23rem 0;
+}
+.cliente__wrapper-img
+{
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+}
+.cliente__img
+{
+    width: auto;
+    margin: auto;
+    max-width: 11.43rem;
+    height: 18rem;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 66%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 66%, rgba(0,0,0,0) 100%);
+}
+.cliente__title
+{
+    color: var(--titulos);
+    font-size: 1.66rem;
+    margin: 1.43rem;
+    font-family: Poppins;
+    text-align: center;
+    border-bottom: 2px solid var(--navDer);
+}
+.cliente__review
+{
+    font-size: .96rem !important;
+    margin: 0.33rem;
+    padding: 1.14rem;
+    background-color: #fffa;
+    box-shadow: 0 0 5px 5px #fff5;
+}
+
+/* Sección 4 Planes */
+.sector_planes
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+}
+.plan
+{
+    margin: 1rem auto 1rem auto;
+    padding: 1.3rem 1rem 1.3rem 1rem;
+    background-color: #fff;
+    max-width: var(--tamplanes);
+    display: flex;
+    flex-direction: column;
+    min-height: 17.234rem;
+    box-shadow: 0 0 15px 0px #000a;
+    min-height: 27rem;
+    height: auto;
+    transition: min-height .6s;
+}
+.plan__title
+{
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1.2rem 1.2rem 1.6rem 1.2rem;
+    font-family: Poppins;
+    letter-spacing: -.04rem;
+    background-color: var(--planinicial);
+    width: 100%;
+    color: var(--titulos);
+}
+.plan__subtitle
+{
+    background-color: #0007;
+    text-align: center;
+    font-weight: 400;
+    font-family: Quicksand;
+    color: #fff;
+    min-width: 50%;
+    padding: .44rem;
+    margin: -.8rem auto .5rem auto;
+}
+.plan__subtitle span
+{
+    font-size: .91rem;
+}
+.plan:nth-child(2) .plan__title
+{
+    background-color: var(--planavanzado);
+}
+.plan:last-child
+{
+    background-color: #d0f3f9;
+}
+.plan:last-child .plan__title
+{
+    background-color: var(--planatleta);
+}
+.plan p.plan__details
+{
+    text-align: center;
+    margin: 0 auto 0 auto;
+    font-size: .7654rem;
+    color: #424242;
+    font-family: Lato;
+}
+.plan ul.plan__benefits
+{
+    font-size: .878rem;
+    padding: 1.2rem 2rem 0 2rem;
+    font-family: Quicksand;
+    color: #24516d;
+    list-style: square;
+    margin: auto 0 auto 0;
+}
+.plan ul.plan__benefits li
+{
+    padding: .87rem;
+}
+.plan .plan__buy
+{
+    margin: .4rem auto .4rem auto;
+    background-color: #103d80;
+    padding: .44rem;
+    border-radius: .87rem;
+    min-width: 9.76rem;
+    transition: background .2s, color .3s, outline .15s, box-shadow .65s;
+}
+
+/* Sección 5 Contacto */
+.sector_contacto
+{
+    background-color: #111;
+    padding: 2rem 0 2rem 0;
+}
+.contacto-container
+{
+    max-height: var(--tamformulario);
+    background-color: var(--fondocontacto);
+    padding: 1.1rem 0 1.1rem 0;
+    border-radius: 1.33rem;
+}
+.contacto-container .contacto__title
+{
+    padding: .677rem .677rem .2rem .677rem;
+    font-size: 1.78rem;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: var(--titulos);
+    font-family: Quicksand;
+}
+.contacto__subtitle
+{
+    text-align: center;
+    margin: auto;
+    font-size: 1.0897rem;
+    font-weight: 300;
+    font-family: Rubik;
+    color: var(--principal);
+}
+/* Formulario */
+.contacto
+{
+    display: flex;
+    flex-direction: column;
+    margin: 1.1rem 0 1.1rem 0;
+}
+.contacto div
+{
+    border-radius: .334rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-size: .8rem;
+    background-color: #4446;
+    color: #444;
+    padding: .5rem;
+    margin: .5rem;
+}
+.contacto div label,input
+{
+    margin: auto .4rem auto .4rem;
+}
+.contacto__input
+{
+    width: 100%;
+    font-size: .88rem;
+    font-weight: 500;
+    font-family: Poppins-Light;
+    letter-spacing: .01rem;
+    color: #fff;
+    opacity: 1;
+    background: none;
+    border: none;
+}
+textarea.contacto__input
+{
+    height: auto;
+    resize: none;
+}
+textarea.contacto__input:focus
+{
+    height: 5rem;
+}
+.contacto__input:focus
+{
+    outline: none;
+}
+.contacto__enviar
+{
+    border: none;
+    border-radius: var(--tambotones);
+    padding: .57rem;
+    font-size: 1rem;
+    font-family: Lato;
+    color: var(--fondocontacto);
+    background-color: var(--secundario);
+    margin: .5rem auto .5rem auto;
+    width: 11rem;
+    transition: background .2s, color .3s, outline .15s;
+}
+/* Sección del footer */
+.footer
+{
+    background-color: var(--principal);
+}
+.footer__superior
+{
+    display: flex;
+    flex-direction: row;
+}
+.footer__logo
+{
+    margin: auto;
+    width: 15.2rem;
+    border-bottom: 2px solid #fff;
+    transition: width .5s;
+}
+.footer__logo:hover, .footer__logo:active
+{
+    width: 25rem;
+}
+.footer__logo img
+{
+    max-height: 5.2rem;
+    filter: saturate(20%) hue-rotate(200deg) brightness(500%);
+}
+.footer__inferior
+{
+    background-color: #44444412;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+.footer__link
+{
+    font-size: 1rem;
+    margin: auto;
+    transition: color .16s, font-size .45s;
+}
+.footer__link:hover
+{
+    text-shadow: 0 0 5px var(--navDer);
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--navDer);
+}
+#footerIG
+{
+    margin-right: .8rem;
+}
+#footerWA
+{
+    margin-left: .8rem;
+}
+/* Animaciones */
+
+@keyframes iluminado {
+    0%
+    {
+        box-shadow: none;
+    }
+    50%
+    {
+        box-shadow: 0 0 35px 5px #fff3;
+    }
+}
+/* Con esto puedo eliminar las flechas del input  */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] { -moz-appearance: textfield; }
